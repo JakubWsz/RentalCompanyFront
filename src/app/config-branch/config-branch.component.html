@@ -1,0 +1,11 @@
+<form>
+  <input type="text" placeholder="Nazwa wypożyczalni" [(ngModel)]="configRentalCompany.name" [ngModelOptions]="{standalone:true}"/> <br>
+  <input type="text" placeholder="Strona wypożyczalni" [(ngModel)]="configRentalCompany.website" [ngModelOptions]="{standalone:true}"/> <br>
+  <input type="text" placeholder="Adres wypożyczalni" [(ngModel)]="configRentalCompany.contactAddress" [ngModelOptions]="{standalone:true}"/> <br>
+  <input type="text" placeholder="Właściciel wypożyczalni" [(ngModel)]="configRentalCompany.owner" [ngModelOptions]="{standalone:true}"/> <br>
+
+  <button (click)="createConfigRentalCompany()" >
+    Stwórz
+  </button>
+</form>
+
