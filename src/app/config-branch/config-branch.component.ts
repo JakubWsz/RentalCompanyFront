@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {HttpClientService} from "../http-client.service";
 
 @Component({
@@ -8,17 +8,19 @@ import {HttpClientService} from "../http-client.service";
 })
 export class ConfigBranchComponent implements OnInit {
   configRentalCompany = {name: '', website: '', contactAddress: '', owner: ''}
+
   constructor(private httpService: HttpClientService) {
   }
 
   ngOnInit(): void {
   }
 
-  createConfigRentalCompany(){
-    this.httpService.configRentalCompany(this.configRentalCompany).subscribe(value =>{
+  createConfigRentalCompany() {
+    this.httpService.configRentalCompany(this.configRentalCompany).subscribe(value => {
       console.log(value);
       this.configRentalCompany = {name: '', website: '', contactAddress: '', owner: ''}
-    },error => { console.log(error);
+    }, error => {
+      console.log(error);
       alert(error.error.message)
     })
   }

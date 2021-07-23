@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {Branch} from "./model/Branch";
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,10 @@ export class HttpClientService {
 
   registerBranch(address: String) {
     return this.http.post("http://localhost:8080/rental-company/open-new-branch", address, {headers: this.getHeadersText()});
+  }
+
+  listBranches() {
+    return this.http.get<Branch[]>("http://localhost:8080/rental-company/get-all-branches", {responseType: 'json'});
   }
 
  private getHeadersText() {

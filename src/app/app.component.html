@@ -1,9 +1,14 @@
-<ul>
-  <li>
-    <a routerLink = "/create-branch">utwórz oddział</a>
-  </li>
-  <li>
-    <a routerLink = "/config-branch">skonfiguruj oddział</a>
-  </li>
-</ul>
-<router-outlet></router-outlet>
+<div class="container-fluid">
+  <ul class="ul-menu">
+    <li class="li-menu">
+      <a routerLink="/create-branch" class="a-menu" role="button">Utwórz oddział</a>
+    </li>
+    <li class="li-menu">
+      <a routerLink="/config-branch" class="a-menu" role="button">Skonfiguruj oddział</a>
+    </li>
+    <li class="li-menu">
+      <a routerLink="/list-branches" class="a-menu" role="button">Lista odziałów</a>
+    </li>
+  </ul>
+  <router-outlet></router-outlet>
+</div>

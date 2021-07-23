@@ -7,17 +7,21 @@ import {RouterModule, Routes} from "@angular/router";
 import {FormsModule} from "@angular/forms";
 import { ConfigBranchComponent } from './config-branch/config-branch.component';
 import {HttpClientModule} from "@angular/common/http";
+import { ListBranchesComponent } from './list-branches/list-branches.component';
 
 const routes: Routes = [
   {path: 'create-branch', component: CreateBranchComponent},
   {path: 'config-branch', component: ConfigBranchComponent},
+  {path: 'list-branches', component: ListBranchesComponent},
+
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateBranchComponent,
-    ConfigBranchComponent
+    ConfigBranchComponent,
+    ListBranchesComponent
   ],
   imports: [
     BrowserModule,
