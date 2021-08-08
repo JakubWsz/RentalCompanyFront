@@ -9,6 +9,9 @@
     <li class="li-menu">
       <a routerLink="/list-branches" class="a-menu" role="button">Lista odziałów</a>
     </li>
+    <li class="li-menu" *ngIf="!authenticator.isLoggedIn()">
+      <a routerLink="/login" class="a-menu" role="button">Logowanie</a>
+    </li>
   </ul>
   <router-outlet></router-outlet>
 </div>

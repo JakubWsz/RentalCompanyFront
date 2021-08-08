@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Branch} from "./model/Branch";
+import {User} from "./model/User";
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +21,18 @@ export class HttpClientService {
 
   listBranches() {
     return this.http.get<Branch[]>("http://localhost:8080/rental-company/get-all-branches", {responseType: 'json'});
+  }
+
+  login(loginRequest: any){
+    return this.http.post<User>("http://localhost:8080/user/login", loginRequest, {headers: this.getHeadersJson()});
+  }
+
+  getBranch(id: number) {
+    return this.http.get<Branch>("http://localhost:8080/rental-company/branch"+id, {responseType: 'json'});
+  }
+
+  patchBranchAddress(id: number){
+    return this.http.patch("http://localhost:8080/update-branch-address"+id, {headers: this.getHeadersJson()})
   }
 
  private getHeadersText() {

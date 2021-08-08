@@ -1,0 +1,20 @@
+<form>
+  <h1>Informacje o oddziale</h1> <br>
+  <h4>Id: </h4>
+  <input type="text" value="{{branch.id}}" [(ngModel)]="branch.id" [ngModelOptions]="{standalone:true}"
+         [disabled]="!canChange()"/> <br>
+  <h4>Adres: </h4>
+  <input type="text" value="{{branch.address}}" [(ngModel)]="branch.address" [ngModelOptions]="{standalone:true}"
+         [disabled]="!canChange()"/> <br>
+  <h4>Pracownicy: </h4>
+  <input type="text" value="{{branch.workers}}" [(ngModel)]="branch.workers" [ngModelOptions]="{standalone:true}"
+         [disabled]="!canChange()"/> <br>
+  <h4>Dostępne samochody: </h4>
+  <input type="text" value="{{branch.availableCars}}" [(ngModel)]="branch.availableCars"
+         [ngModelOptions]="{standalone:true}"
+         [disabled]="!canChange()"/> <br>
+  <button disabled>
+    Zaktualizuj
+  </button>
+</form>
+

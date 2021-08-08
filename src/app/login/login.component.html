@@ -1,0 +1,7 @@
+<form>
+  <input type="text" placeholder="Nazwa użytkownika" [(ngModel)]="user.username" [ngModelOptions]="{standalone:true}"/>
+  <input type="password" placeholder="Hasło użytkownika" [(ngModel)]="user.password" [ngModelOptions]="{standalone:true}"/>
+  <button (click)="login()" >
+    Zaloguj się
+  </button>
+</form>
